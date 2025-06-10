@@ -41,4 +41,3 @@ public class BuscadorMovimiento {
         return alcanzables;
     }
 }
-
