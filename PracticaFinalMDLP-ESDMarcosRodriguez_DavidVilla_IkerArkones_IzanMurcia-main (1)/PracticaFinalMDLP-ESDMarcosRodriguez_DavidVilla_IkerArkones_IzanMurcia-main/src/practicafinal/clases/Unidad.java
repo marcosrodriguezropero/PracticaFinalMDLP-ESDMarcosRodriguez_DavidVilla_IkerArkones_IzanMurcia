@@ -91,9 +91,20 @@ public abstract class Unidad {
         @Override
         public void realizarAccion() {}
     }
+    public int getAtaque() {
+        return ataque;
+    }
+
+    public int getDefensa() {
+        return defensa;
+    }
+
     public int getRangoMovimiento() {
         return rangoMovimiento;
     }
 
-}
+    public int getRangoAtaque() {
+        return rangoAtaque;
+    }
 
+}
