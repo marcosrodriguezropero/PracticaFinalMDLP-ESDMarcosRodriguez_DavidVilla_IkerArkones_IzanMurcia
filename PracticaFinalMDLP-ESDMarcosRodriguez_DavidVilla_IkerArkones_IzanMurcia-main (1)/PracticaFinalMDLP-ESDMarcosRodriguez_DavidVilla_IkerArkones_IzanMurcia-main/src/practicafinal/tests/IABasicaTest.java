@@ -20,16 +20,13 @@ public class IABasicaTest {
         jugadorHumano = new Jugador("Humano", false);
 
         tablero = new Tablero(5, 5);
-
-        // Crear unidades IA
+        
         Unidad ingenieroIA = new Unidad.Ingeniero(jugadorIA);
         Unidad matematicoIA = new Unidad.Matematico(jugadorIA);
-
-        // Crear unidades humano
+        
         Unidad poetaHumano = new Unidad.Poeta(jugadorHumano);
         Unidad filologoHumano = new Unidad.Filologo(jugadorHumano);
-
-        // Posicionar unidades en el tablero
+        
         tablero.getCasilla(0, 0).colocarUnidad(ingenieroIA);
         ingenieroIA.setFila(0);
         ingenieroIA.setColumna(0);
@@ -45,8 +42,7 @@ public class IABasicaTest {
         tablero.getCasilla(4, 3).colocarUnidad(filologoHumano);
         filologoHumano.setFila(4);
         filologoHumano.setColumna(3);
-
-        // Agregar unidades a los jugadores
+        
         jugadorIA.getUnidades().agregarFinal(ingenieroIA);
         jugadorIA.getUnidades().agregarFinal(matematicoIA);
 
@@ -61,8 +57,7 @@ public class IABasicaTest {
         Unidad unidadIA = jugadorIA.getUnidades().obtener(0);
         int filaInicial = unidadIA.getFila();
         int colInicial = unidadIA.getColumna();
-
-        // Guardar hp inicial enemigos
+        
         ListaEnlazada<Unidad> enemigos = jugadorHumano.getUnidades();
         int[] hpIniciales = new int[enemigos.tamanio()];
         for (int i = 0; i < enemigos.tamanio(); i++) {
